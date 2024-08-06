@@ -1,8 +1,7 @@
 version: '3.8'
 services:
   bot:
-    image: node:14
-    working_dir: /usr/src/app
+    build: .
     volumes:
       - ./:/usr/src/app
     command: node script.js
