@@ -21,7 +21,7 @@ Object.entries(answers).forEach(([key, value]) => {
     await manager.train();
     manager.save();
 
-    const bott = new TelegramBot('6753179534:AAHbNH08qVKo3kX6DFBcOWJeReVylGF69hQ', { polling: true });
+    const bott = new TelegramBot('7331736184:AAH5KO-X0DrTT0f3APAkgSR01bKo4HLhs_k', { polling: true });
 
     bott.onText(/\/echo (.+)/, (msg, match) => bott.sendMessage(msg.chat.id, match[1]));
 
