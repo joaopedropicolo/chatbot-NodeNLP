@@ -79,6 +79,7 @@
     "tatuados podem doar sangue?": "doacao.12",
     "ter tatuagem impede a doação de sangue?": "doacao.12",
     "pode doar sangue quem tem tatuagem?": "doacao.12",
+    "tenho tatuagem posso doar?": "doacao.12",
     "menor de idade pode doar sangue?": "doacao.13",
     "tenho menos de 18, posso doar sangue?": "doacao.13",
     "tenho menos de dezoito, posso doar sangue?": "doacao.13",
@@ -109,6 +110,7 @@
     "qual é o intervalo necessário entre as doações de sangue?": "doacao.15",
     "qual é o tempo necessário entre as doações de sangue?": "doacao.15",
     "qual é o intervalo recomendado entre as doações de sangue?": "doacao.15",
+    "em quanto tempo eu posso doar?": "doacao.15",
     "estrangeiros podem doar sangue?": "doacao.16",
     "pessoas de outros países podem doar sangue?": "doacao.16",
     "estrangeiros estão aptos a doar sangue?": "doacao.16",
@@ -317,11 +319,5 @@
     "vacina para influenza impede a doação de sangue?": "doacao.52",
     "quem tomou vacina para influenza pode doar sangue?": "doacao.52",
     "posso doar sangue após tomar vacina para influenza?": "doacao.52",
-    "vacina para influenza é impedimento para doar sangue?": "doacao.52",
-    "o que é voce?": "doacao.53",
-    "voce é uma pessoa?": "doacao.53",
-    "voce é real?": "doacao.53",
-    "sobre voce": "doacao.53",
-    "porque devo doar sangue?": "doacao.54",
-    "tenho que doar sangue?": "doacao.54"
+    "vacina para influenza é impedimento para doar sangue?": "doacao.52"
 }
