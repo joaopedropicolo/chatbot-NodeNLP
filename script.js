@@ -21,7 +21,7 @@ Object.entries(answers).forEach(([key, value]) => {
     await manager.train();
     manager.save();
 
-    const bott = new TelegramBot('6753179534:AAHbNH08qVKo3kX6DFBcOWJeReVylGF69hQ', { polling: true });
+    const bott = new TelegramBot('6782553841:AAGIBnF0xW-z48isb9Lsq_cPp4m4-UFRuL4', { polling: true });
 
     bott.onText(/\/echo (.+)/, (msg, match) => bott.sendMessage(msg.chat.id, match[1]));
 
@@ -49,11 +49,13 @@ Object.entries(answers).forEach(([key, value]) => {
         } else {
 
             const responseMessages = [
-                "Aqui está a resposta que você pediu: 📝",
+                "Aqui está a resposta do que você pediu: 📝",
                 "Esta é a informação que você solicitou: 📚",
                 "Encontrei a resposta para você: 🔍",
                 "Aqui está o que você queria saber: 💡",
-                "Sua resposta é a seguinte: ✅"
+                "Sua resposta é a seguinte: ✅",
+                "Aqui está o que você está procurando: 😀",
+                "A resposta é a seguinte: 😉"
             ];
 
             const responseMessage = responseMessages[Math.floor(Math.random() * responseMessages.length)];
