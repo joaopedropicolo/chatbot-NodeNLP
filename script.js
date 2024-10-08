@@ -20,7 +20,7 @@ Object.entries(answers).forEach(([key, value]) => {
     await manager.train();
     manager.save();
 
-    const bott = new TelegramBot('7066583631:AAGhiUz9swrCMzV9oe7lcq6c0yrDxQIUJkk', { polling: true });
+    const bott = new TelegramBot('6782553841:AAGIBnF0xW-z48isb9Lsq_cPp4m4-UFRuL4', { polling: true });
 
     bott.onText(/\/echo (.+)/, (msg, match) => bott.sendMessage(msg.chat.id, match[1]));
 
@@ -66,7 +66,7 @@ Object.entries(answers).forEach(([key, value]) => {
             await bott.sendMessage(chatId, reply, { parse_mode: 'HTML' }); 
             const helloMessage = helloMessages[Math.floor(Math.random() * helloMessages.length)];
             bott.sendMessage(chatId, helloMessage, { parse_mode: 'HTML' });
-            
+
             } else {
 
             const responseMessages = [
