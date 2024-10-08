@@ -12,7 +12,6 @@ Object.entries(strings).forEach(([key, value]) => {
     manager.addDocument('pt', key, value);
 });
 
-
 Object.entries(answers).forEach(([key, value]) => {
     manager.addAnswer('pt', key, value);
 });
@@ -21,7 +20,7 @@ Object.entries(answers).forEach(([key, value]) => {
     await manager.train();
     manager.save();
 
-    const bott = new TelegramBot('6782553841:AAGIBnF0xW-z48isb9Lsq_cPp4m4-UFRuL4', { polling: true });
+    const bott = new TelegramBot('7066583631:AAGhiUz9swrCMzV9oe7lcq6c0yrDxQIUJkk', { polling: true });
 
     bott.onText(/\/echo (.+)/, (msg, match) => bott.sendMessage(msg.chat.id, match[1]));
 
@@ -42,26 +41,48 @@ Object.entries(answers).forEach(([key, value]) => {
                 "Infelizmente, não consegui entender isso. 😕",
                 "Pode tentar perguntar de outra maneira? 🤔"
             ];
-
             const errorMessage = errorMessages[Math.floor(Math.random() * errorMessages.length)];
             bott.sendMessage(chatId, errorMessage, { parse_mode: 'HTML' }); 
             
         } else {
 
+            const reply = response.answer;
+            
+            if (response.intent == 'cumprimentos.ola') {
+
+                const helloMessages = [
+                    "Tente me perguntar sobre como doar sangue! 🩸",
+                    "Que tal me perguntar com que idade pode se doar sangue? 💡",
+                    "Quer saber sobre a doação de sangue? Sinta-se a vontade para me perguntar sobre! 😉",
+                    "Tente me perguntar com que peso pode-se doar! 📚",
+                    "Não se limite, pergunte-me sobre doação de sangue! 😀",
+                    "Se interessou em saber mais sobre a importância da doação de sangue? Pergunte-me! ❤️",
+                    "Vamos conversar sobre os mitos e verdades sobre doação de sangue! O que você gostaria de saber? 🧐",
+                    "Quer saber mais sobre os requisitos para doar sangue? Estou aqui para ajudar! 💡",
+                    "Você sabia que doar sangue pode salvar vidas? Pergunte como você pode ajudar! 🌍",
+                    "Está pensando em doar sangue? Pergunte-me como você pode começar! 🌟"
+                ];
+                
+            await bott.sendMessage(chatId, reply, { parse_mode: 'HTML' }); 
+            const helloMessage = helloMessages[Math.floor(Math.random() * helloMessages.length)];
+            bott.sendMessage(chatId, helloMessage, { parse_mode: 'HTML' });
+            
+            } else {
+
             const responseMessages = [
-                "Aqui está a resposta do que você pediu: 📝",
-                "Esta é a informação que você solicitou: 📚",
-                "Encontrei a resposta para você: 🔍",
-                "Aqui está o que você queria saber: 💡",
-                "Sua resposta é a seguinte: ✅",
-                "Aqui está o que você está procurando: 😀",
-                "A resposta é a seguinte: 😉"
+                "Com o que mais posso ajudar? 🤔",
+                "Há mais alguma dúvida que eu possa esclarecer? 📚",
+                "Precisa de mais alguma coisa? 😊",
+                "Posso te ajudar com mais alguma informação? 💡",
+                "Algo mais em que eu possa ser útil? 👍",
+                "Tem mais alguma dúvida? 😀",
+                "Posso ajudar com mais alguma coisa? 😉"
             ];
 
+            await bott.sendMessage(chatId, reply, { parse_mode: 'HTML' }); 
             const responseMessage = responseMessages[Math.floor(Math.random() * responseMessages.length)];
             bott.sendMessage(chatId, responseMessage, { parse_mode: 'HTML' });
-            const reply = response.answer;
-            await bott.sendMessage(chatId, reply, { parse_mode: 'HTML' });
+            }
         }
     });
 })();
