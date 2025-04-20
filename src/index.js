@@ -10,8 +10,9 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.listen(3000, () => {
-    console.log('Está escutando a porta 3000! http://localhost:3000')
+const porta = 3000
+app.listen(porta, () => {
+    console.log(`Está escutando a porta ${porta}! http://localhost:${porta}`)
 })
 
 console.log(`Diretório de trabalho atual: ${process.cwd()}`);

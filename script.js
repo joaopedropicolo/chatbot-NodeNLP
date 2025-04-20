@@ -7,7 +7,6 @@ const answers = JSON.parse(fs.readFileSync('answers.json', 'utf8'));
 
 const manager = new NlpManager({ languages: ['pt'] });
 
-
 Object.entries(strings).forEach(([key, value]) => {
     manager.addDocument('pt', key, value);
 });
@@ -20,7 +19,7 @@ Object.entries(answers).forEach(([key, value]) => {
     await manager.train();
     manager.save();
 
-    const bott = new TelegramBot('6782553841:AAGIBnF0xW-z48isb9Lsq_cPp4m4-UFRuL4', { polling: true });
+    const bott = new TelegramBot('>>>>>>>TOKEN DO BOT AQUI<<<<<<<', { polling: true });
 
     bott.onText(/\/echo (.+)/, (msg, match) => bott.sendMessage(msg.chat.id, match[1]));
 

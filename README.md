@@ -19,11 +19,12 @@ DIALOGFLOW_PROJECT_ID=seu_project_id_do_dialogflow
 DIALOGFLOW_PRIVATE_KEY=seu_private_key_do_dialogflow
 DIALOGFLOW_CLIENT_EMAIL=seu_email_client_do_dialogflow
 </code></pre>
+<p>Não se esqueça de colocar a token do seu bot no script.js! A token é gerada pelo <a href="https://telegram.me/BotFather">BotFather do Telegram</a>.</p>
 
 <p><strong>Nota:</strong> Para obter essas credenciais, crie um projeto no <a href="https://dialogflow.cloud.google.com/" target="_blank">Dialogflow</a>, gere as credenciais de API e adicione as informações no arquivo <code>.env</code>.</p>
 
 <h3>5. 🚀 <strong>Rodar o Projeto</strong></h3>
 <p>Com as dependências instaladas e as variáveis de ambiente configuradas, inicie o servidor com:</p>
-<pre><code>npm start</code></pre>
+<pre><code>node .\script.js</code></pre>
 
 <p>Isso deve iniciar o servidor do chatbot. Agora, você pode testar o chatbot e interagir com ele!</p>

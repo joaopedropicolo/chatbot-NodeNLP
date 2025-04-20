@@ -1,5 +1,0 @@
-1 - Envia os arquivos para o github
-2 - Acessa o servidor ssh server@192.168.0.28
-3 - Acessa o repositorio do projeto 'cd /home/server/apps/chatbot-avaliar'
-4 - Executa o comando 'git pull origin master'
-5 - Reinicia o projeto 'docker compose down' e 'docker compose up -d'
